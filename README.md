@@ -24,9 +24,9 @@ You can find information about the Raspberry Pi Pico on its  [Pico web page](htt
 
 Create a new script with File>New and paste in the following code:
 
-```
-print("Hello, World!")
-```
+    ```
+    print("Hello, World!")
+    ```
 
 Click the Green Play button to Run the code Thonny you will be prompted to save to your computer OR the pico. Select save to Pico and name the file lesson2.py
 
@@ -34,16 +34,16 @@ Click the Green Play button to Run the code Thonny you will be prompted to save 
 
 
 lets create a new script with File>New and paste in the following code:
-```
-from time import sleep
+    ```
+    from time import sleep
 
-n = 0
+    n = 0
 
-while True:
-    print("13 x",n,"= ",13*n) # print the thirteen-times table
-    n = n+1
-    sleep(0.5)
-```
+    while True:
+        print("13 x",n,"= ",13*n) # print the thirteen-times table
+        n = n+1
+        sleep(0.5)
+    ```
 Click the Green Play button to Run the and save it as lesson2.py
 
 The time module provides functions for getting the current time and date, and for sleeping.
@@ -59,64 +59,64 @@ we set a variable n=0 start a While loop and print the thirteen-times table unti
 
 Now lets say you want to stop at 13x37 how do we do that. 
 
-```
-from time import sleep
+    ```
+    from time import sleep
 
-n = 0
+    n = 0
 
-while n < 38:
-    print("13 x",n,"= ",13*n) # print the thirteen-times table
-    n = n+1
-    sleep(0.5)
-```
+    while n < 38:
+        print("13 x",n,"= ",13*n) # print the thirteen-times table
+        n = n+1
+        sleep(0.5)
+    ```
 now it will stop when n gets to 38
 
 now we will add the ```else``` statement we can run a block of code once when the condition no longer is true:
 
 lets add this to our code 
-```
-else:
-  print("n is no longer less than 37")
-```
+    ```
+    else:
+      print("n is no longer less than 37")
+    ```
 
 The code should look like this 
-```
-from time import sleep
+    ```
+    from time import sleep
 
-n = 0
-
-while n < 38:
-    print("13 x",n,"= ",13*n) # print the thirteen-times table
-    n = n+1
-    sleep(0.5)
-    
-else:
-  print("n is no longer less than 37")
-```
-
-
-Create a new script with File>New and paste in the following code:
-
-```
-from time import sleep
-
-
-def therteentimes():
     n = 0
-    
+
     while n < 38:
         print("13 x",n,"= ",13*n) # print the thirteen-times table
         n = n+1
         sleep(0.5)
-    
-    else:
-        print("n is no longer less than 37")
-        
 
-print("Call Function")
-therteentimes()
-print("End")
-```
+    else:
+      print("n is no longer less than 37")
+    ```
+
+
+Create a new script with File>New and paste in the following code:
+
+    ```
+    from time import sleep
+
+
+    def therteentimes():
+        n = 0
+
+        while n < 38:
+            print("13 x",n,"= ",13*n) # print the thirteen-times table
+            n = n+1
+            sleep(0.5)
+
+        else:
+            print("n is no longer less than 37")
+
+
+    print("Call Function")
+    therteentimes()
+    print("End")
+    ```
 Click the Green Play button to Run the and save it as lesson3.py
 
 
@@ -128,25 +128,25 @@ and can optionally return data (the return value). All data that is passed to a 
 Here is the same function passing in the times tabel we want "times" and the total of times "total" 
 
 Create a new script with File>New and paste in the following code:
-```
-from time import sleep
+    ```
+    from time import sleep
 
 
-def therteentimes(times,total):
-    n = 0
-    
-    while n < total:
-        print(times,"x",n,"= ",13*n) # print the times-times table
-        n = n+1
-        sleep(0.5)
-    
-    else:
-        print("n is no longer less than",total)
-        
+    def therteentimes(times,total):
+        n = 0
 
-print("Call Function")
-therteentimes(3,10)
-print("End of program")
+        while n < total:
+            print(times,"x",n,"= ",13*n) # print the times-times table
+            n = n+1
+            sleep(0.5)
+
+        else:
+            print("n is no longer less than",total)
+
+
+    print("Call Function")
+    therteentimes(3,10)
+    print("End of program")
 
 ```
 Click the Green Play button to Run the and save it as lesson4.py
@@ -163,23 +163,34 @@ lets define led to the pin
 lets toggle the led
 Create a new script with File>New and paste in the following code:
 
-```
-from machine import Pin
-led = Pin(6, Pin.OUT)
+    ```
+    from machine import Pin
+    led = Pin(6, Pin.OUT)
 
-led.toggle()
-```
+    led.toggle()
+    ```
 Click the Green Play button to Run the and save it as lesson5.py
+Every time you the the Run button the led should toggle on or off. 
+
+Lets modify this code a little with what we have learned all ready 
+    ```
+    from machine import Pin
+    from time import sleep
 
 
+    led = Pin(6, Pin.OUT)
+    n=0
 
+    led.toggle()
 
+    while n < 8:
+        led.toggle()
+        n = n+1
+        sleep(0.5)
 
-
-
-
-
-
+    else:
+      print("Done toggling ")
+    ```
 
 
 **NOTE: If you wish to run the code automatically whenever you power Raspberry Pi Pico then you have to name your code file as "main.py" while saving it.**
