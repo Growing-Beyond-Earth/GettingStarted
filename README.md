@@ -155,11 +155,13 @@ Click the Green Play button to Run the and save it as lesson4.py
 ##Now lets start working with the Control box 
 
 GPIO Pins
-The way to control  other components, is through the GPIO pins. Not all pins are available to use, in most cases only pins 0, 2, 4, 5, 12, 13, 14, 15, and 16 can be used.
+The way to control  other components, is through the GPIO pins. Not all pins are available to use, in most cases 
+only pins 0, 2, 4, 5, 12, 13, 14, 15, and 16 can be used.
 
 The pins are available in the machine module, so make sure you import that first. 
 lets define led to the pin
 lets toggle the led
+Create a new script with File>New and paste in the following code:
 
 ```
 from machine import Pin
@@ -167,7 +169,7 @@ led = Pin(6, Pin.OUT)
 
 led.toggle()
 ```
-
+Click the Green Play button to Run the and save it as lesson5.py
 
 
 
