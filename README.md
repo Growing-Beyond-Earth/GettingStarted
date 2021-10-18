@@ -252,7 +252,7 @@ Click the Green Play button to Run the and save it as PWM-LED.py
 
 
 
-Now that we undestand PWM let control one of the LED klights on the GBE box 
+Now that we undestand PWM lets control the Red LEDs lights on the GBE box light pannel 
 Create a new script with File>New and paste in the following code:
 ```
 
