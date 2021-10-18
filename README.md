@@ -40,7 +40,7 @@ from time import sleep
 n = 0
 
 while True:
-    print("13 x {} = {}".format(n, 13*n)) # print the thirteen-times table
+    print("13 x",n,"= ",13*n) # print the thirteen-times table
     n = n+1
     sleep(0.5)
 ```
@@ -48,7 +48,103 @@ Click the Green Play button to Run the and save it as lesson2.py
 
 The time module provides functions for getting the current time and date, and for sleeping.
 
-we set a variable n=0 start a loop and print the thirteen-times table
+Python has two primitive loop commands:
+
+-   while  loops
+-   for  loops
+
+we will us the While loop 
+we set a variable n=0 start a While loop and print the thirteen-times table until you hit the stop button
+
+
+Now lets say you want to stop at 13x37 how do we do that. 
+
+```
+from time import sleep
+
+n = 0
+
+while n < 38:
+    print("13 x",n,"= ",13*n) # print the thirteen-times table
+    n = n+1
+    sleep(0.5)
+```
+now it will stop when n gets to 38
+
+now we will add the ```else``` statement we can run a block of code once when the condition no longer is true:
+
+lets add this to our code 
+```
+else:
+  print("n is no longer less than 37")
+```
+
+The code should look like this 
+```
+from time import sleep
+
+n = 0
+
+while n < 38:
+    print("13 x",n,"= ",13*n) # print the thirteen-times table
+    n = n+1
+    sleep(0.5)
+    
+else:
+  print("n is no longer less than 37")
+```
+
+
+Create a new script with File>New and paste in the following code:
+
+```
+from time import sleep
+
+
+def therteentimes():
+    n = 0
+    
+    while n < 38:
+        print("13 x",n,"= ",13*n) # print the thirteen-times table
+        n = n+1
+        sleep(0.5)
+    
+    else:
+        print("n is no longer less than 37")
+        
+
+print("Call Function")
+therteentimes()
+print("End")
+```
+Click the Green Play button to Run the and save it as lesson3.py
+We taken what we have leanred and made it a function we can call 
+
+Functions are blocks of code that are referred to by name. Data can be passed into it to be operated on (i.e. the parameters) 
+and can optionally return data (the return value). All data that is passed to a function is explicitly passed.
+
+Here is the same function passing in the times tabel we want "times" and the total of times "total" 
+```
+from time import sleep
+
+
+def therteentimes(times,total):
+    n = 0
+    
+    while n < total:
+        print(times,"x",n,"= ",13*n) # print the times-times table
+        n = n+1
+        sleep(0.5)
+    
+    else:
+        print("n is no longer less than",total)
+        
+
+print("Call Function")
+therteentimes(3,10)
+print("End")
+
+```
 
 
 **NOTE: If you wish to run the code automatically whenever you power Raspberry Pi Pico then you have to name your code file as "main.py" while saving it.**
@@ -56,6 +152,7 @@ we set a variable n=0 start a loop and print the thirteen-times table
 ## MicroPython 1.7 Documnetation 
 
 MicroPython 1.7 https://docs.micropython.org/en/latest/index.html https://docs.micropython.org/en/latest/rp2/quickref.html#
+
 
 
 ## More with MicroPython on Raspberry Pi Pico
