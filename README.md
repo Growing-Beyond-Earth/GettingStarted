@@ -1,6 +1,7 @@
 # Thonny IDE with the Raspberry Pi Pico
 
-In this first lesson, I will demonstrate how to use Thonny IDE and MicroPython on a Raspberry Pi Pico to do something simple with the Raspberry Pi Pico,
+In this lesson, I will demonstrate how to use Thonny IDE and MicroPython on a Raspberry Pi Pico to do something simple with the Raspberry Pi Pico, 
+and your GBE control box. 
 
 ## Setup the environment
 Let's begin by downloading and installing [Thonny Python IDE for beginners ](https://thonny.org/). 
