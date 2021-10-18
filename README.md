@@ -43,7 +43,7 @@ while True:
     n = n+1
     sleep(0.5)
  ```
-Click the Green Play button to Run the and save it as lesson2.py
+Click the Green Play button to Run the and save it as lesson1.py
 
 The time module provides functions for getting the current time and date, and for sleeping.
 
