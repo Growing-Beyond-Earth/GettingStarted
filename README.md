@@ -384,3 +384,7 @@ As well as learning how to use Raspberry Pi Pico’s pins as inputs and outputs,
 your Pico’s file system, and even make a burglar alarm for your room .
 
 [Get Started with MicroPython on Raspberry Pi Pico is available now from Raspberry Pi Press](https://magpi.cc/picobook).
+
+Whats inside your GBE BOX
+![Pico](https://user-images.githubusercontent.com/1426877/134377016-ab970d6b-3738-4b69-ad7e-c381f620e1c7.png)
+
