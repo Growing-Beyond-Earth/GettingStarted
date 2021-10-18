@@ -142,7 +142,7 @@ def therteentimes(times,total):
 
 print("Call Function")
 therteentimes(3,10)
-print("End")
+print("End of program")
 
 ```
 
