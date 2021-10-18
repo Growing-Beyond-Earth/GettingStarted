@@ -171,7 +171,7 @@ led = Pin(6, Pin.OUT)
 
 led.toggle()
 ```
-Click the Green Play button to Run the and save it as lesson5.py
+Click the Green Play button to Run the and save it as LEDToggle.py
 Every time you the the Run button the led should toggle on or off. 
 
 Lets modify this code a little with what we have learned all ready 
@@ -244,6 +244,9 @@ while True:
 
 
 ```
+Click the Green Play button to Run the and save it as PWM-LED.py
+
+
 
 **NOTE: If you wish to run the code automatically whenever you power Raspberry Pi Pico then you have to name your code file as "main.py" while saving it.**
 
