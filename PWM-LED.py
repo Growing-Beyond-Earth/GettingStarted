@@ -1,5 +1,19 @@
-# Example using PWM to fade an LED.
+# GROWNG BEYOND EARTH CONTROL BOX Traning
+# RASPBERRY PI PICO / MICROPYTHON
 
+# FAIRCHILD TROPICAL BOTANIC GARDEN, Oct 18, 2021
+
+# The Growing Beyond Earth (GBE) control box is a device that controls
+# the LED lights and fan in a GBE growth chamber. It can also control
+# accessories including a 12v water pump and environmental sensors. 
+# The device is based on a Raspberry Pi Pico microcontroller running 
+# Micropython.
+# lesson Written by @MarioTheMaker  
+
+
+
+
+# Example using PWM to fade an LED.
 # Pulse width modulation (PWM) is a way to get an artificial analog output on a digital pin.
 # It achieves this by rapidly toggling the pin from low to high. There are two parameters
 # associated with this: the frequency of the toggling, and the duty cycle.
@@ -14,6 +28,8 @@
 # If additional arguments are given in the constructor then they are used to initialise
 # the pin. Any settings that are not specified will remain in their previous state.
 # More info https://docs.micropython.org/en/latest/library/machine.Pin.html
+
+
 
 
 import time
