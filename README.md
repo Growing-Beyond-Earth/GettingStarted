@@ -194,13 +194,8 @@ else:
   print("Done toggling ")
  ```
 
-What does this new example do ?
-
-
-
-
 Now lets make the LED fade in and out using Pulse width modulation (PWM) as we move foeard the next best thing is to start comenting you code. 
-Moving foward all the eamplses will have the expxlantion in the code. 
+Moving foward all the examples will have the expxlantion in the code. 
 
 Create a new script with File>New and paste in the following code:
 Let’s use the PWM feature to fade an LED 
@@ -246,13 +241,114 @@ while True:
 ```
 Click the Green Play button to Run the and save it as PWM-LED.py
 
+Now that we undestand PWM let control one of the LED klights on the GBE box 
+Create a new script with File>New and paste in the following code:
+```
+
+from sys import stdin, stdout, exit
+import machine
+import time
+from time import sleep
 
 
+#Set the brightness for each color 
+red_brightness = 100
 
 
+# Pulse width modulation (PWM) is a way to get an artificial analog output on a digital pin.
+# It achieves this by rapidly toggling the pin from low to high. There are two parameters
+# associated with this: the frequency of the toggling, and the duty cycle.
+# The duty cycle is defined to be how long the pin is high compared with the length of a
+# single period (low plus high time). Maximum duty cycle is when the pin is high all of the
+# time, and minimum is when it is low all of the time.
+# https://projects.raspberrypi.org/en/projects/getting-started-with-the-pico/7#:
+
+# control I/O pins
+# machine.Pin(id, mode=- 1, pull=- 1, *, value, drive, alt)
+
+#Pins for the GBE light panel 
+#Red Lights Pin(0)
+#Green Lights Pin(2)
+#Blue Lights Pin(2)
+r=machine.PWM(machine.Pin(0)); r.freq(20000)   # Setup the Red channel on Pin0
+
+n=100
+
+while n > 0:
+    print("Power Level",n)
+    r.duty_u16(int(red_brightness)*n)
+    n = n - 15
+    sleep(0.5)
+    
+else:
+    print("turn the Red LED off")
+    r.duty_u16(0) #turn it off 
+
+```
+Click the Green Play button to Run the and save it as PWM-RedLED.py
 
 
+Now lers control all the lights on the GBE box 
+Create a new script with File>New and paste in the following code:
 
+```
+from sys import stdin, stdout, exit
+import machine
+import time
+
+#Set the brightness for each color 
+red_brightness = 100
+green_brightness = 100
+blue_brightness = 100
+white_brightness = 100
+
+# Pulse width modulation (PWM) is a way to get an artificial analog output on a digital pin.
+# It achieves this by rapidly toggling the pin from low to high. There are two parameters
+# associated with this: the frequency of the toggling, and the duty cycle.
+# The duty cycle is defined to be how long the pin is high compared with the length of a
+# single period (low plus high time). Maximum duty cycle is when the pin is high all of the
+# time, and minimum is when it is low all of the time.
+# https://projects.raspberrypi.org/en/projects/getting-started-with-the-pico/7#:
+
+# control I/O pins
+# machine.Pin(id, mode=- 1, pull=- 1, *, value, drive, alt)
+# Access the pin peripheral (GPIO pin) associated with the given id.
+# If additional arguments are given in the constructor then they are used to initialise
+# the pin. Any settings that are not specified will remain in their previous state.
+# More info https://docs.micropython.org/en/latest/library/machine.Pin.html
+r=machine.PWM(machine.Pin(0)); r.freq(20000)   # Red channel
+g=machine.PWM(machine.Pin(2)); g.freq(20000)   # Green channel
+b=machine.PWM(machine.Pin(1)); b.freq(20000)   # Blue channel
+w=machine.PWM(machine.Pin(3)); w.freq(20000)   # White channel
+
+
+# More info https://docs.micropython.org/en/latest/library/machine.PWM.html
+# Start a loop and change the brightness multiplier "n"
+# PWM.duty_u16([value]) Get the current duty cycle of the PWM output,
+# as an unsigned 16-bit value in the range 0 to 65535 inclusive.
+
+#Set the power level 
+n = 200
+
+#lets turn all the lights on and reduce the power by 5 as we loop trough it till power gets to zero. 
+while n > 0:
+    print("Power Level ",n)
+    r.duty_u16(int(red_brightness)*n)
+    g.duty_u16(int(green_brightness)*n)
+    b.duty_u16(int(blue_brightness)*n)
+    w.duty_u16(int(white_brightness)*n)
+    time.sleep(.3)
+    n = n - 5
+ 
+#Turn all the lights off
+time.sleep(3)
+r.duty_u16(0)
+g.duty_u16(0)
+b.duty_u16(0)
+w.duty_u16(0)
+```
+
+Click the Green Play(Run) button to Run the and save it as LightTestLoop.py
 
 
 
