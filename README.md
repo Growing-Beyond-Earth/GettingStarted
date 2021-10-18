@@ -118,12 +118,16 @@ therteentimes()
 print("End")
 ```
 Click the Green Play button to Run the and save it as lesson3.py
-We taken what we have leanred and made it a function we can call 
 
+
+
+We taken what we have leanred and made it a function we can call 
 Functions are blocks of code that are referred to by name. Data can be passed into it to be operated on (i.e. the parameters) 
 and can optionally return data (the return value). All data that is passed to a function is explicitly passed.
 
 Here is the same function passing in the times tabel we want "times" and the total of times "total" 
+
+Create a new script with File>New and paste in the following code:
 ```
 from time import sleep
 
@@ -145,6 +149,35 @@ therteentimes(3,10)
 print("End of program")
 
 ```
+Click the Green Play button to Run the and save it as lesson4.py
+
+
+##Now lets start working with the Control box 
+
+GPIO Pins
+The way to control  other components, is through the GPIO pins. Not all pins are available to use, in most cases only pins 0, 2, 4, 5, 12, 13, 14, 15, and 16 can be used.
+
+The pins are available in the machine module, so make sure you import that first. 
+lets define led to the pin
+lets toggle the led
+
+```
+from machine import Pin
+led = Pin(6, Pin.OUT)
+
+led.toggle()
+```
+
+
+
+
+
+
+
+
+
+
+
 
 
 **NOTE: If you wish to run the code automatically whenever you power Raspberry Pi Pico then you have to name your code file as "main.py" while saving it.**
@@ -157,6 +190,8 @@ MicroPython 1.7 https://docs.micropython.org/en/latest/index.html https://docs.m
 
 ## More with MicroPython on Raspberry Pi Pico
 
-For more physical computing projects to try on your Raspberry Pi Pico, grab a copy of the new book, Get Started with MicroPython on Raspberry Pi Pico. As well as learning how to use Raspberry Pi Pico’s pins as inputs and outputs, you’ll build a simple game, measure temperatures, save and load data to your Pico’s file system, and even make a burglar alarm for your room .
+For more physical computing projects to try on your Raspberry Pi Pico, grab a copy of the new book, Get Started with MicroPython on Raspberry Pi Pico. 
+As well as learning how to use Raspberry Pi Pico’s pins as inputs and outputs, you’ll build a simple game, measure temperatures, save and load data to 
+your Pico’s file system, and even make a burglar alarm for your room .
 
 [Get Started with MicroPython on Raspberry Pi Pico is available now from Raspberry Pi Press](https://magpi.cc/picobook).
