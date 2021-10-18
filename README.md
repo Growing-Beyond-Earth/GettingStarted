@@ -247,10 +247,13 @@ Let’s use the PWM feature to fade an LED
 
 **NOTE: If you wish to run the code automatically whenever you power Raspberry Pi Pico then you have to name your code file as "main.py" while saving it.**
 
+## Raspberry Pi Pico Python SDK
+"[Raspberry Pi Pico Python SDK](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-python-sdk.pdf) book published by Raspberry Pi Trading, 
+which forms part of the technical documentation in support of Raspberry Pi Pico and the MicroPython port to RP2040.
+
 ## MicroPython 1.7 Documnetation 
 
 MicroPython 1.7 https://docs.micropython.org/en/latest/index.html https://docs.micropython.org/en/latest/rp2/quickref.html#
-
 
 
 ## More with MicroPython on Raspberry Pi Pico
