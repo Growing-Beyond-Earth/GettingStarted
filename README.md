@@ -392,6 +392,35 @@ Click the Green Play(Run) button to Run the and save it as LightTestLoop.py
 
 
 
+Control the Fan 
+
+```
+import machine
+from time import sleep
+# control I/O pins
+# machine.Pin(id, mode=- 1, pull=- 1, *, value, drive, alt)
+
+#Pin for the GBE FAN
+#Pin(40
+
+fan_speed = 500
+f=machine.PWM(machine.Pin(4)); f.freq(20000)   # Fan
+
+n=100
+
+while n > 0:
+    print("fan_speed",n)
+    f.duty_u16(fan_speed* 256)
+    n = n - 15
+    sleep(1)
+    
+else:
+    print("turn the Fan off")
+    f.duty_u16(0)
+```
+
+
+
 
 **NOTE: If you wish to run the code automatically whenever you power Raspberry Pi Pico then you have to name your code file as "main.py" while saving it.**
 
