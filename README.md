@@ -28,6 +28,10 @@ Create a new script with File>New and paste in the following code:
 print("Hello, World!")
 ```
 
+Click the Green Play button to Run the code Thonny will ask you where do you want to save it 
+
+<img width="1068" alt="SavePico" src="https://user-images.githubusercontent.com/1426877/137758143-fb010874-a2ba-4475-b0c4-9c2bd010cc88.png">
+
 
 **NOTE: If you wish to run the code automatically whenever you power Raspberry Pi Pico then you have to name your code file as "main.py" while saving it.**
 
