@@ -34,14 +34,14 @@ Click the Green Play button to Run the code Thonny you will be prompted to save 
 
 lets create a new script with File>New and paste in the following code:
  ```
-    from time import sleep
+from time import sleep
 
-    n = 0
+n = 0
 
-    while True:
-        print("13 x",n,"= ",13*n) # print the thirteen-times table
-        n = n+1
-        sleep(0.5)
+while True:
+    print("13 x",n,"= ",13*n) # print the thirteen-times table
+    n = n+1
+    sleep(0.5)
  ```
 Click the Green Play button to Run the and save it as lesson2.py
 
@@ -61,14 +61,14 @@ For more information about loops https://realpython.com/python-while-loop/
 Now lets say you want to stop at 13x37 how do we do that. 
 
 ```
-    from time import sleep
+from time import sleep
 
-    n = 0
+n = 0
 
-    while n < 38:
-        print("13 x",n,"= ",13*n) # print the thirteen-times table
-        n = n+1
-        sleep(0.5)
+while n < 38:
+    print("13 x",n,"= ",13*n) # print the thirteen-times table
+    n = n+1
+    sleep(0.5)
  ```
 now it will stop when n gets to 38
 
@@ -76,14 +76,33 @@ now we will add the ```else``` statement we can run a block of code once when th
 
 lets add this to our code 
  ```
-    else:
-      print("n is no longer less than 37")
+else:
+  print("n is no longer less than 37")
  ```
 
 The code should look like this 
 ```
-    from time import sleep
+from time import sleep
 
+n = 0
+
+while n < 38:
+    print("13 x",n,"= ",13*n) # print the thirteen-times table
+    n = n+1
+    sleep(0.5)
+
+else:
+  print("n is no longer less than 37")
+```
+
+
+Create a new script with File>New and paste in the following code:
+
+ ```
+from time import sleep
+
+
+def therteentimes():
     n = 0
 
     while n < 38:
@@ -92,31 +111,12 @@ The code should look like this
         sleep(0.5)
 
     else:
-      print("n is no longer less than 37")
-```
+        print("n is no longer less than 37")
 
 
-Create a new script with File>New and paste in the following code:
-
- ```
-    from time import sleep
-
-
-    def therteentimes():
-        n = 0
-
-        while n < 38:
-            print("13 x",n,"= ",13*n) # print the thirteen-times table
-            n = n+1
-            sleep(0.5)
-
-        else:
-            print("n is no longer less than 37")
-
-
-    print("Call Function")
-    therteentimes()
-    print("End")
+print("Call Function")
+therteentimes()
+print("End")
 ```
 Click the Green Play button to Run the and save it as lesson3.py
 
@@ -130,24 +130,24 @@ Here is the same function passing in the times tabel we want "times" and the tot
 
 Create a new script with File>New and paste in the following code:
  ```
-    from time import sleep
+from time import sleep
 
 
-    def therteentimes(times,total):
-        n = 0
+def therteentimes(times,total):
+    n = 0
 
-        while n < total:
-            print(times,"x",n,"= ",13*n) # print the times-times table
-            n = n+1
-            sleep(0.5)
+    while n < total:
+        print(times,"x",n,"= ",13*n) # print the times-times table
+        n = n+1
+        sleep(0.5)
 
-        else:
-            print("n is no longer less than",total)
+    else:
+        print("n is no longer less than",total)
 
 
-    print("Call Function")
-    therteentimes(3,10)
-    print("End of program")
+print("Call Function")
+therteentimes(3,10)
+print("End of program")
 
 ```
 Click the Green Play button to Run the and save it as lesson4.py
@@ -166,32 +166,32 @@ lets toggle the led
 Create a new script with File>New and paste in the following code:
 
 ```
-    from machine import Pin
-    led = Pin(6, Pin.OUT)
+from machine import Pin
+led = Pin(6, Pin.OUT)
 
-    led.toggle()
+led.toggle()
 ```
 Click the Green Play button to Run the and save it as lesson5.py
 Every time you the the Run button the led should toggle on or off. 
 
 Lets modify this code a little with what we have learned all ready 
   ```
-    from machine import Pin
-    from time import sleep
+from machine import Pin
+from time import sleep
 
 
-    led = Pin(6, Pin.OUT)
-    n=0
+led = Pin(6, Pin.OUT)
+n=0
 
+led.toggle()
+
+while n < 8:
     led.toggle()
+    n = n+1
+    sleep(0.5)
 
-    while n < 8:
-        led.toggle()
-        n = n+1
-        sleep(0.5)
-
-    else:
-      print("Done toggling ")
+else:
+  print("Done toggling ")
  ```
 
 What does this new example do ?
@@ -206,41 +206,41 @@ Create a new script with File>New and paste in the following code:
 Let’s use the PWM feature to fade an LED 
 
 ```
-    from machine import Pin, PWM
-    from time import sleep
+from machine import Pin, PWM
+from time import sleep
 
-    # Pulse width modulation (PWM) is a way to get an artificial analog output on a digital pin.
-    # It achieves this by rapidly toggling the pin from low to high. There are two parameters
-    # associated with this: the frequency of the toggling, and the duty cycle.
-    # The duty cycle is defined to be how long the pin is high compared with the length of a
-    # single period (low plus high time). Maximum duty cycle is when the pin is high all of the
-    # time, and minimum is when it is low all of the time.
-    # https://projects.raspberrypi.org/en/projects/getting-started-with-the-pico/7#:
+# Pulse width modulation (PWM) is a way to get an artificial analog output on a digital pin.
+# It achieves this by rapidly toggling the pin from low to high. There are two parameters
+# associated with this: the frequency of the toggling, and the duty cycle.
+# The duty cycle is defined to be how long the pin is high compared with the length of a
+# single period (low plus high time). Maximum duty cycle is when the pin is high all of the
+# time, and minimum is when it is low all of the time.
+# https://projects.raspberrypi.org/en/projects/getting-started-with-the-pico/7#:
 
-    # control I/O pins
-    # machine.Pin(id, mode=- 1, pull=- 1, *, value, drive, alt)
-    # Access the pin peripheral (GPIO pin) associated with the given id.
-    # If additional arguments are given in the constructor then they are used to initialise
-    # the pin. Any settings that are not specified will remain in their previous state.
-    # More info https://docs.micropython.org/en/latest/library/machine.Pin.html
+# control I/O pins
+# machine.Pin(id, mode=- 1, pull=- 1, *, value, drive, alt)
+# Access the pin peripheral (GPIO pin) associated with the given id.
+# If additional arguments are given in the constructor then they are used to initialise
+# the pin. Any settings that are not specified will remain in their previous state.
+# More info https://docs.micropython.org/en/latest/library/machine.Pin.html
 
-    # Construct PWM object, with LED on Pin(6) pin used on the GBE Box.
-    pwm = PWM(Pin(6))
+# Construct PWM object, with LED on Pin(6) pin used on the GBE Box.
+pwm = PWM(Pin(6))
 
-    # Set the PWM frequency.
-    pwm.freq(1000)
+# Set the PWM frequency.
+pwm.freq(1000)
 
-    #Start Loop
+#Start Loop
 
-    #FadeIn
-    while True:
-        for duty in range(65025):
-            pwm.duty_u16(duty)
-            sleep(0.0001)
-    #FadeOut
-        for duty in range(65025, 0, -1):
-            pwm.duty_u16(duty)
-            sleep(0.0001)
+#FadeIn
+while True:
+    for duty in range(65025):
+        pwm.duty_u16(duty)
+        sleep(0.0001)
+#FadeOut
+    for duty in range(65025, 0, -1):
+        pwm.duty_u16(duty)
+        sleep(0.0001)
 
 
 ```
