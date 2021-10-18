@@ -168,6 +168,11 @@ The pins are available in the machine module, so make sure you import that first
 lets define led to the pin
 lets toggle the led
 
+## Controling the GBE box LED 
+
+![IMG_4519](https://user-images.githubusercontent.com/1426877/137814836-7e92faf8-b270-49fd-b2f4-61e9a0277072.jpeg)
+
+
 Create a new script with File>New and paste in the following code:
 
 ```
