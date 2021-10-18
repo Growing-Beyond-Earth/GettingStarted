@@ -18,9 +18,8 @@ The Raspberry Pi Pico comes with MicroPython already flashed. This means that it
 
 You can find information about the Raspberry Pi Pico on its  [Pico web page](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html).  The Raspberry Pi Pico is well-equipped with all sorts of GPIO and communications capabilities.
 
-## Experiment
 
-## Writing a Script
+## Writing a Python Script
 
 Create a new script with File>New and paste in the following code:
 
