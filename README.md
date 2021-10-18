@@ -12,14 +12,16 @@ Start Thonny and Thonny should detect the Raspberry Pi Pico.
 <img width="720" alt="USB/GBE" src="https://user-images.githubusercontent.com/1426877/137810163-8d4aaa12-0de8-4751-a105-00ea4aa79e26.jpeg">
 
 
-In the Thonny Tools menu, select "options", then "interpreter", and change the interpreter to the "MicroPython (Raspberry Pi Pico)" option. Also select the correct connection port for the device.
+In the Thonny Tools menu, select "options", then "interpreter", and change the interpreter to the "MicroPython (Raspberry Pi Pico)" option. 
+Also select the correct connection port for the device.
 ![Thonny-IDE-with-Raspberry-Pi-Pico-usb](https://user-images.githubusercontent.com/1426877/137755071-c7339229-fb2e-4d3b-bef7-818c0e9dab30.jpeg)
 
 The Raspberry Pi Pico comes with MicroPython already flashed. This means that it is literally "plug and play"
 
 ## Documentation
 
-You can find information about the Raspberry Pi Pico on its  [Pico web page](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html).  The Raspberry Pi Pico is well-equipped with all sorts of GPIO and communications capabilities.
+You can find information about the Raspberry Pi Pico on its  [Pico web page](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html). 
+The Raspberry Pi Pico is well-equipped with all sorts of GPIO and communications capabilities.
 
 
 ## Writing a Python Script
@@ -270,9 +272,9 @@ red_brightness = 100
 # machine.Pin(id, mode=- 1, pull=- 1, *, value, drive, alt)
 
 #Pins for the GBE light panel 
-#Red Lights Pin(0)
+#Red Lights   Pin(0)
 #Green Lights Pin(2)
-#Blue Lights Pin(2)
+#Blue Lights  Pin(3)
 r=machine.PWM(machine.Pin(0)); r.freq(20000)   # Setup the Red channel on Pin0
 
 n=100
