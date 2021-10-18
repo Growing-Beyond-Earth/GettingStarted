@@ -27,7 +27,7 @@ Create a new script with File>New and paste in the following code:
 print("Hello, World!")
 ```
 
-Click the Green Play button to Run the code Thonny you will be prompted to save to your computer OR the pico. Select save to Pico and name the file lesson2.py
+Click the Green Play button to Run the code Thonny you will be prompted to save to your computer OR the pico. Select save to Pico and name the file lesson1.py
 
 <img width="1068" alt="SavePico" src="https://user-images.githubusercontent.com/1426877/137758143-fb010874-a2ba-4475-b0c4-9c2bd010cc88.png">
 
@@ -43,7 +43,7 @@ while True:
     n = n+1
     sleep(0.5)
  ```
-Click the Green Play button to Run the and save it as lesson1.py
+Click the Green Play button to Run the and save it as lesson2.py
 
 The time module provides functions for getting the current time and date, and for sleeping.
 
