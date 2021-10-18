@@ -207,6 +207,28 @@ else:
 Now lets make the LED fade in and out using Pulse width modulation (PWM) as we move foeard the next best thing is to start comenting you code. 
 Moving foward all the examples will have the expxlantion in the code. 
 
+In order to use PWM in MicroPython, we will use just three instructions:
+```
+from machine import Pin , PWM
+
+pwm = PWM  (  Pin  (  16  )  ) # GPIO # 
+
+pwm. freq  (  100000  ) # 100kHz Frequency 
+
+pwm. duty_u16  (  32768  ) # duty 50% (65535/2)
+
+The duty cycle controls the pin’s output: a 0 percent duty cycle leaves the pin switched off for all 1000 pulses per
+second, and effectively turns the pin off; a 100 percent duty cycle leaves the pin switched on for all 1000 pulses per second, and is 
+functionally equivalent to just turning the pin on as a fixed digital output; a 50 percent duty cycle has the pin on for half the pulses 
+and off for half the pulses.
+```
+
+
+If you run the test code  above, it should generate a 100kHz PWM signal with a 50% duty cycle on pin 16
+
+PWM Pulse width modulation allows you control devices, such as motors and lamps,LED's. This means that rather than the motor/lamp being simply on or off, 
+you can regulate its speed or brightness.
+
 Create a new script with File>New and paste in the following code:
 Let’s use the PWM feature to fade an LED 
 
@@ -239,11 +261,11 @@ pwm.freq(1000)
 
 #FadeIn
 while True:
-    for duty in range(65025):
+    for duty in range(65025): #100% Duty =65025
         pwm.duty_u16(duty)
         sleep(0.0001)
 #FadeOut
-    for duty in range(65025, 0, -1):
+    for duty in range(65025, 0, -1): #0% Duty =0
         pwm.duty_u16(duty)
         sleep(0.0001)
 
