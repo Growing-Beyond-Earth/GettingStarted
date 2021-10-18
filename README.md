@@ -3,9 +3,14 @@
 In this first lesson, I will demonstrate how to use Thonny IDE and MicroPython on a Raspberry Pi Pico to do something simple with the Raspberry Pi Pico,
 
 ## Setup the environment
-Let's begin by downloading [Thonny Python IDE for beginners ](https://thonny.org/).  Once Thonny is installed lets start by connecting the Raspberry Pi Pico to the computer via the USB cable. Start Thonny and Thonny should detect the Raspberry Pi Pico.
+Let's begin by downloading and installing [Thonny Python IDE for beginners ](https://thonny.org/). 
+
+Once Thonny is installed lets start by connecting the Raspberry Pi Pico to the computer via the USB cable. Start Thonny and Thonny should detect the Raspberry Pi Pico.
+
+![Pico-Top-Plug-v2](https://user-images.githubusercontent.com/1426877/137755029-e5da0c8e-af08-48bd-8366-65ae495da883.png)
 
 In the Thonny Tools menu, select "options", then "interpreter", and change the interpreter to the "MicroPython (Raspberry Pi Pico)" option. Also select the correct connection port for the device.
+![Thonny-IDE-with-Raspberry-Pi-Pico-usb](https://user-images.githubusercontent.com/1426877/137755071-c7339229-fb2e-4d3b-bef7-818c0e9dab30.jpeg)
 
 The Raspberry Pi Pico comes with MicroPython already flashed. This means that it is literally "plug and play"
 
