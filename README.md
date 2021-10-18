@@ -56,6 +56,8 @@ Python has two primitive loop commands:
 we will us the While loop 
 we set a variable n=0 start a While loop and print the thirteen-times table until you hit the stop button
 
+For more information about loops https://realpython.com/python-while-loop/
+
 
 Now lets say you want to stop at 13x37 how do we do that. 
 
