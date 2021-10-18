@@ -24,6 +24,10 @@ You can find information about the Raspberry Pi Pico on its  [Pico web page](htt
 
 Create a new script with File>New and paste in the following code:
 
+```
+print("Hello, World!")
+```
+
 
 **NOTE: If you wish to run the code automatically whenever you power Raspberry Pi Pico then you have to name your code file as "main.py" while saving it.**
 
