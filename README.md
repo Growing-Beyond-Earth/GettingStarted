@@ -248,6 +248,15 @@ Click the Green Play button to Run the and save it as PWM-LED.py
 
 
 
+
+
+
+
+
+
+
+
+
 **NOTE: If you wish to run the code automatically whenever you power Raspberry Pi Pico then you have to name your code file as "main.py" while saving it.**
 
 ## Raspberry Pi Pico Python SDK
