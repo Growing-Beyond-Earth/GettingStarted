@@ -430,6 +430,8 @@ else:
 
 Click the Green Play(Run) button to Run the and save it as `FanControl.py`
 
+Here we are controlling the fan's speed, which can be used to remove heat or moisture from your GBE Box. 
+Play with changing the fan_speed = 500 and multiplier to test how much air is pulled from your GBE box. 
 
 
 If you are intrested on what code is running on your control box today, here is the link https://github.com/Growing-Beyond-Earth/control-box
