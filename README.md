@@ -4,9 +4,9 @@ In this lesson, I will demonstrate how to use Thonny IDE and MicroPython on a Ra
 and your GBE control box. 
 
 ## Setup the environment
-Let's begin by downloading and installing [Thonny Python IDE for beginners ](https://thonny.org/). 
+Let us begin by downloading and installing [Thonny Python IDE for beginners ](https://thonny.org/). 
 
-Once Thonny is installed lets start by connecting the Raspberry Pi Pico to the computer via the USB cable. 
+Once Thonny is installed let us start by connecting the Raspberry Pi Pico inside the GBE Control box to the computer via the USB cable. 
 Start Thonny and Thonny should detect the Raspberry Pi Pico.
 
 <img width="480" alt="USB" src="https://user-images.githubusercontent.com/1426877/137810102-ff0c4ffd-cd28-4c82-b689-bbe59cab93dd.jpeg"> <img width="480" alt="USB/GBE" src="https://user-images.githubusercontent.com/1426877/137810163-8d4aaa12-0de8-4751-a105-00ea4aa79e26.jpeg">
@@ -29,7 +29,9 @@ The Raspberry Pi Pico is well-equipped with all sorts of GPIO and communications
 Create a new script with File>New and paste in the following code:
 
 ```
+{
 print("Hello, World!")
+}
 ```
 
 Click the Green Play button to Run the code Thonny you will be prompted to save to your computer OR the pico. Select save to Pico and name the file lesson1.py
@@ -50,6 +52,7 @@ while True:
  ```
 Click the Green Play button to Run the and save it as lesson2.py
 
+Let see what the code does:
 The time module provides functions for getting the current time and date, and for sleeping.
 
 Python has two primitive loop commands:
@@ -58,12 +61,11 @@ Python has two primitive loop commands:
 -   for  loops
 
 we will us the While loop 
-we set a variable n=0 start a While loop and print the thirteen-times table until you hit the stop button
+we set a variable n=0 and start a While loop and print the thirteen-times table until you hit the stop button
 
-For more information about loops https://realpython.com/python-while-loop/
+*For more information about loops https://realpython.com/python-while-loop/*
 
-
-Now lets say you want to stop at 13x37 how do we do that. 
+Now lets say you want to stop at 13x37 how do we do that?
 
 ```
 from time import sleep
@@ -77,7 +79,7 @@ while n < 38:
  ```
 now it will stop when n gets to 38
 
-now we will add the ```else``` statement we can run a block of code once when the condition no longer is true:
+now we will add the ```else``` statement it alows us to run a block of code once when the condition no longer is true:
 
 lets add this to our code 
  ```
@@ -127,7 +129,7 @@ Click the Green Play button to Run the and save it as lesson3.py
 
 
 
-We taken what we have leanred and made it a function we can call 
+We taken what we have leanred and made the code a function we can call 
 Functions are blocks of code that are referred to by name. Data can be passed into it to be operated on (i.e. the parameters) 
 and can optionally return data (the return value). All data that is passed to a function is explicitly passed.
 
@@ -161,8 +163,7 @@ Click the Green Play button to Run the and save it as lesson4.py
 ##Now lets start working with the Control box 
 
 GPIO Pins
-The way to control  other components, is through the GPIO pins. Not all pins are available to use, in most cases 
-only pins 0, 2, 4, 5, 12, 13, 14, 15, and 16 can be used.
+The way to control  other components, is through the GPIO pins. Not all pins are available to use.
 
 The pins are available in the machine module, so make sure you import that first. 
 lets define led to the pin
@@ -182,9 +183,10 @@ led = Pin(6, Pin.OUT)
 led.toggle()
 ```
 Click the Green Play button to Run the and save it as LEDToggle.py
+
 Every time you the the Run button the led should toggle on or off. 
 
-Lets modify this code a little with what we have learned all ready 
+Lets modify this code a little with what we have learned 
   ```
 from machine import Pin
 from time import sleep
@@ -203,14 +205,15 @@ while n < 8:
 else:
   print("Done toggling ")
  ```
+Click the Green Play button to Run
 
-Now lets make the LED fade in and out using Pulse width modulation (PWM) as we move foeard the next best thing is to start comenting you code. 
-Moving foward all the examples will have the expxlantion in the code. 
+The LED should be toggling on and off. 
+
+Now lets make the LED fade in and out using Pulse width modulation (PWM) as we move foeard the next best thing is 
+to start comenting your code. Moving foward all the examples will have the expxlantion in the code. 
 
 In order to use PWM in MicroPython, we will use just three instructions:
 ```
-from machine import Pin , PWM
-
 pwm = PWM  (  Pin  (  16  )  ) # GPIO # 
 
 pwm. freq  (  100000  ) # 100kHz Frequency 
