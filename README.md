@@ -179,8 +179,7 @@ Now let's start working with the Control box.
 
 
 GPIO Pins
-The way to control  other components, is through the GPIO pins. Not all pins are available to use, in most cases
-only pins 0, 2, 4, 5, 12, 13, 14, 15, and 16 can be used.
+The way to control  other components, is through the GPIO pins. Not all pins are available to use.
 
 The pins are available in the machine module, so make sure you import that first.
 let's define led to the pin
