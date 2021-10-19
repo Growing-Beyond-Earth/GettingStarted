@@ -302,6 +302,7 @@ red_brightness = 100
 # single period (low plus high time). Maximum duty cycle is when the pin is high all of the
 # time, and minimum is when it is low all of the time.
 # https://projects.raspberrypi.org/en/projects/getting-started-with-the-pico/7#:
+
 # control I/O pins
 # machine.Pin(id, mode=- 1, pull=- 1, *, value, drive, alt)
 #Pins for the GBE light panel 
@@ -309,6 +310,7 @@ red_brightness = 100
 #Green Lights Pin(1)
 #Blue Lights  Pin(2)
 #White Lights  Pin(3)
+
 r=machine.PWM(machine.Pin(0)); r.freq(20000)   # Setup the Red channel on Pin0
 n=100
 while n > 0:
@@ -337,6 +339,7 @@ red_brightness = 100
 green_brightness = 100
 blue_brightness = 100
 white_brightness = 100
+
 # Pulse width modulation (PWM) is a way to get an artificial analog output on a digital pin.
 # It achieves this by rapidly toggling the pin from low to high. There are two parameters
 # associated with this: the frequency of the toggling, and the duty cycle.
@@ -350,16 +353,20 @@ white_brightness = 100
 # If additional arguments are given in the constructor then they are used to initialise
 # the pin. Any settings that are not specified will remain in their previous state.
 # More info https://docs.micropython.org/en/latest/library/machine.Pin.html
+
 r=machine.PWM(machine.Pin(0)); r.freq(20000)   # Red channel
 g=machine.PWM(machine.Pin(1)); g.freq(20000)   # Green channel
 b=machine.PWM(machine.Pin(2)); b.freq(20000)   # Blue channel
 w=machine.PWM(machine.Pin(3)); w.freq(20000)   # White channel
+
 # More info https://docs.micropython.org/en/latest/library/machine.PWM.html
 # Start a loop and change the brightness multiplier "n"
 # PWM.duty_u16([value]) Get the current duty cycle of the PWM output,
 # as an unsigned 16-bit value in the range 0 to 65535 inclusive.
+
 #Set the power level 
 n = 200
+
 #lets turn all the lights on and reduce the power by 5 as we loop trough it till power gets to zero. 
 while n > 0:
     print("Power Level ",n)
