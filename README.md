@@ -266,7 +266,7 @@ while True:
 
 Click the green play button to run the and save it as `PWM-LED.py`
 
-## Controling the GBE box light pannel 
+## Controling the GBE light pannel 
 
 Now that we undestand PWM lets control the Red LEDs lights on the GBE box light pannel 
 
