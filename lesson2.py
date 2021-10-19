@@ -10,7 +10,6 @@
 # Micropython.
 # lesson Written by @MarioTheMaker
 
-
 from time import sleep
 
 n = 0
