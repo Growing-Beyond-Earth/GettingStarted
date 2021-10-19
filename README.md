@@ -428,7 +428,7 @@ else:
 
 ```
 
-Click the Green Play(Run) button to Run the and save it as `FanLoop.py`
+Click the Green Play(Run) button to Run the and save it as `FanControl.py`
 
 
 
