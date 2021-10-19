@@ -9,7 +9,7 @@ Let us begin by downloading and installing [Thonny Python IDE for beginners ](ht
 Once Thonny is installed let us start by connecting the Raspberry Pi Pico inside the GBE Control box to the computer via the USB cable. 
 Start Thonny and Thonny should detect the Raspberry Pi Pico.
 
-<img width="480" alt="USB" src="https://user-images.githubusercontent.com/1426877/137810102-ff0c4ffd-cd28-4c82-b689-bbe59cab93dd.jpeg"> <img width="480" alt="USB/GBE" src="https://user-images.githubusercontent.com/1426877/137810163-8d4aaa12-0de8-4751-a105-00ea4aa79e26.jpeg">
+<img width="400" alt="USB" src="https://user-images.githubusercontent.com/1426877/137810102-ff0c4ffd-cd28-4c82-b689-bbe59cab93dd.jpeg"> <img width="400" alt="USB/GBE" src="https://user-images.githubusercontent.com/1426877/137810163-8d4aaa12-0de8-4751-a105-00ea4aa79e26.jpeg">
 
 
 In the Thonny Tools menu, select "options", then "interpreter", and change the interpreter to the "MicroPython (Raspberry Pi Pico)" option. 
