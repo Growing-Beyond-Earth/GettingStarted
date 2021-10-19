@@ -11,6 +11,17 @@
 # lesson Written by @MarioTheMaker
 
 from machine import Pin
+from time import sleep
+
 led = Pin(6, Pin.OUT)
+n=0
 
 led.toggle()
+
+while n < 8:
+  led.toggle()
+  n = n+1
+  sleep(0.5)
+
+else:
+  print("Done toggling ")
