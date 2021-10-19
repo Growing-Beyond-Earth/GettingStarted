@@ -27,11 +27,10 @@ The Raspberry Pi Pico is well-equipped with all sorts of GPIO and communications
 ## Writing a Python Script
 
 Create a new script with File>New and paste in the following code:
-
 ```
-{
+
 print("Hello, World!")
-}
+
 ```
 
 Click the Green Play button to Run the code Thonny you will be prompted to save to your computer OR the pico. Select save to Pico and name the file lesson1.py
