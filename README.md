@@ -271,10 +271,8 @@ Click the green play button to run the and save it as `PWM-LED.py`
 Now that we undestand PWM lets control the Red LEDs lights on the GBE box light pannel 
 
 ![FAOiOaJVQAgzIez](https://user-images.githubusercontent.com/1426877/137812924-6f1ab3f4-2bfb-4634-a012-9b73efbdb6d2.jpeg)
-Click the green play button to run the and save it as `PWM-LED.py`
 
-
-Create a new script with File>New and paste in the following code:
+Create a new script with `File>New` and paste in the following code:
 
 ```
 from sys import stdin, stdout, exit
@@ -311,8 +309,8 @@ else:
 Click the Green Play button to Run the and save it as PWM-RedLED.py
 
 
-Now lers control all the lights on the GBE box 
-Create a new script with File>New and paste in the following code:
+Now lets control all the lights on the GBE box 
+Create a new script with `File>New` and paste in the following code:
 
 ```
 from sys import stdin, stdout, exit
@@ -369,7 +367,7 @@ Click the Green Play(Run) button to Run the and save it as LightTestLoop.py
 
 ## Controling the GBE fan
 
-
+Create a new script with `File>New` and paste in the following code:
 
 ```
 import machine
