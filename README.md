@@ -414,6 +414,9 @@ else:
     f.duty_u16(0)
 ```
 
+Click the Green Play(Run) button to Run the and save it as `FanLoop.py`
+
+
 
 If you are intrested on what code is running on your control box today, here is the link https://github.com/Growing-Beyond-Earth/control-box
 
