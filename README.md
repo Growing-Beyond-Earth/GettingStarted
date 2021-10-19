@@ -175,6 +175,9 @@ Checkout these links for more details on the builtin function [range](https://ww
 
 Now let's start working with the Control box.
 
+![IMG_4519](https://user-images.githubusercontent.com/1426877/137814836-7e92faf8-b270-49fd-b2f4-61e9a0277072.jpeg)
+
+
 GPIO Pins
 The way to control  other components, is through the GPIO pins. Not all pins are available to use, in most cases
 only pins 0, 2, 4, 5, 12, 13, 14, 15, and 16 can be used.
@@ -267,9 +270,6 @@ while True:
 Click the green play button to run the and save it as `PWM-LED.py`
 
 ## Controling the GBE light pannel 
-
-![IMG_4519](https://user-images.githubusercontent.com/1426877/137814836-7e92faf8-b270-49fd-b2f4-61e9a0277072.jpeg)
-
 
 Now that we undestand PWM lets control the Red LEDs lights on the GBE box light pannel 
 
