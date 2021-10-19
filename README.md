@@ -6,8 +6,7 @@ and your GBE control box.
 ## Setup the environment
 Let us begin by downloading and installing [Thonny Python IDE for beginners ](https://thonny.org/). 
 
-Once Thonny is installed let us start by connecting the Raspberry Pi Pico inside the GBE Control box to the computer via the USB cable. 
-Start Thonny and Thonny should detect the Raspberry Pi Pico.
+Once Thonny is installed let us start by switching off the main power to the GBE Control Box and connecting the Micro USB cable to the Raspberry Pi Pico inside the Control Box. Connect the other end of the cable to a USB port on your computer. Start Thonny and Thonny should detect the Raspberry Pi Pico. 
 
 <img width="400" alt="USB" src="https://user-images.githubusercontent.com/1426877/137810102-ff0c4ffd-cd28-4c82-b689-bbe59cab93dd.jpeg"> <img width="400" alt="USB/GBE" src="https://user-images.githubusercontent.com/1426877/137810163-8d4aaa12-0de8-4751-a105-00ea4aa79e26.jpeg">
 
@@ -128,7 +127,7 @@ Click the Green Play button to Run the and save it as lesson3.py
 
 
 
-We taken what we have leanred and made the code a function we can call 
+Now we will take what we have learned and make the code into a function we can call from within a program.
 Functions are blocks of code that are referred to by name. Data can be passed into it to be operated on (i.e. the parameters) 
 and can optionally return data (the return value). All data that is passed to a function is explicitly passed.
 
@@ -161,7 +160,7 @@ Click the Green Play button to Run the and save it as lesson4.py
 
 ##Now lets start working with the Control box 
 
-GPIO Pins
+GPIO (general purpose input/output) Pins
 The way to control  other components, is through the GPIO pins. Not all pins are available to use.
 
 The pins are available in the machine module, so make sure you import that first. 
@@ -311,8 +310,9 @@ red_brightness = 100
 
 #Pins for the GBE light panel 
 #Red Lights   Pin(0)
-#Green Lights Pin(2)
-#Blue Lights  Pin(3)
+#Green Lights Pin(1)
+#Blue Lights  Pin(2)
+#White Lights  Pin(3)
 r=machine.PWM(machine.Pin(0)); r.freq(20000)   # Setup the Red channel on Pin0
 
 n=100
@@ -331,7 +331,7 @@ else:
 Click the Green Play button to Run the and save it as PWM-RedLED.py
 
 
-Now lers control all the lights on the GBE box 
+Now lets control all the lights on the GBE box 
 Create a new script with File>New and paste in the following code:
 
 ```
@@ -360,8 +360,8 @@ white_brightness = 100
 # the pin. Any settings that are not specified will remain in their previous state.
 # More info https://docs.micropython.org/en/latest/library/machine.Pin.html
 r=machine.PWM(machine.Pin(0)); r.freq(20000)   # Red channel
-g=machine.PWM(machine.Pin(2)); g.freq(20000)   # Green channel
-b=machine.PWM(machine.Pin(1)); b.freq(20000)   # Blue channel
+g=machine.PWM(machine.Pin(1)); g.freq(20000)   # Green channel
+b=machine.PWM(machine.Pin(2)); b.freq(20000)   # Blue channel
 w=machine.PWM(machine.Pin(3)); w.freq(20000)   # White channel
 
 
