@@ -374,6 +374,8 @@ r.duty_u16(0)
 g.duty_u16(0)
 b.duty_u16(0)
 w.duty_u16(0)
+print("Power Level Off")
+
 ```
 
 Click the Green Play(Run) button to Run the and save it as LightTestLoop.py
