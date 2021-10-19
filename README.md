@@ -2,7 +2,7 @@
 
 In this first lesson, we demonstrate how to use Thonny IDE and MicroPython on a Raspberry Pi Pico to do something simple with the Raspberry Pi Pico.
 
-## Setup the environment
+## Set up the environment
 
 Let's begin by downloading and installing [Thonny Python IDE for beginners ](https://thonny.org/).
 
@@ -17,7 +17,7 @@ The Raspberry Pi Pico comes with MicroPython already flashed. This means that it
 
 ## Documentation
 
-You can find information about the Raspberry Pi Pico on the  [Pico web page](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html).  The Raspberry Pi Pico is well-equipped with all sorts of GPIO and communication capabilities.
+You can find information about the Raspberry Pi Pico on the  [Pico web page](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html).  The Raspberry Pi Pico is well-equipped with all sorts of GPIO (general purpose input/output) and communication capabilities.
 
 ## Lesson #1: Hello World
 
@@ -27,7 +27,7 @@ Create a new script with `File>New` and paste in the following code:
 print("Hello, World!")
 ```
 
-Click the green play button to run the code. Thonny will ask where to save the code to. Select `Raspberry Pi Pico` and name the file lesson1.py.
+Click the green play button to run the code. Thonny will ask where to save the code. Select `Raspberry Pi Pico` and name the file lesson1.py.
 
 <img width="1068" alt="SavePico" src="https://user-images.githubusercontent.com/1426877/137758143-fb010874-a2ba-4475-b0c4-9c2bd010cc88.png">
 
@@ -93,7 +93,7 @@ while n < 38:
 print(f"n now has value {n} and our program is complete!")
 ```
 
-Notice that this last `print` line is *outside* of the `while` loop-- it is not indented and will only be executed once the while clause is `False`.  We also used an [f string](https://realpython.com/python-f-strings/).  The `f` before the quotes on a string indicate that anything inside `{}` should be evaluated and printed.  There are several different syntaxes in python for formatting strings, but `f` strings are quite eligent.  Be warned however-- they were introduced in python `3.6` and will not work in older versions of python.
+Notice that this last `print` line is *outside* of the `while` loop-- it is not indented and will only be executed once the while clause is `False`.  We also used an [f string](https://realpython.com/python-f-strings/).  The `f` before the quotes on a string indicate that anything inside `{}` should be evaluated and printed.  There are several different syntaxes in python for formatting strings, but `f` strings are quite elegant.  Be warned however-- they were introduced in python `3.6` and will not work in older versions of python.
 
 ## Lesson #3: Functions and Comments
 
@@ -122,7 +122,7 @@ print_thirteen_times_table_until()
 print("End")
 ```
 
-Click the green play button to run the and save it as lesson3.py
+Click the green play button to run the code and save it as lesson3.py
 
 *Functions* are blocks of code that are referred to by name. Functions can take in *positional arguments* or *keyword arguments* or both.  They can optionally return data (the return value). In the function definition *default values* can also be assigned to arguments.
 
@@ -191,10 +191,10 @@ led = Pin(6, Pin.OUT)
 led.toggle()
 ```
 
-Click the green play button to run the and save it as `LEDToggle.py`
-Every time you the the Run button the led should toggle on or off.
+Click the green play button to run the code and save it as `LEDToggle.py`
+Every time you click the the Run button the led should toggle on or off.
 
-Lets modify this code a little with what we have learned all ready:
+Lets modify this code a little with what we have learned already:
 
   ```python
 from machine import Pin
@@ -215,12 +215,11 @@ else:
     print("Done toggling ")
  ```
 
-What does this new example do ?
+What does this new example do?
 
-Does the LED toggle on and off. 
+Does the LED toggle on and off?
 
-Now lets make the LED fade in and out using Pulse width modulation (PWM). Moving foward all the examples will have the expxlantion in the code. 
-Now let's make the LED fade in and out using Pulse width modulation (PWM);
+Now lets make the LED fade in and out using Pulse width modulation (PWM). Moving foward, all the examples will have comments within the code that explain how everything works.
 
 In order to use PWM in MicroPython, we will use just three instructions:
 ```
@@ -231,7 +230,7 @@ pwm. freq  (  100000  ) # 100kHz Frequency
 ```
 The test code above, should generate a 100kHz PWM signal with a 50% duty cycle on pin 16
 
-PWM Pulse width modulation allows you control devices, such as motors and lamps,LED's. 
+PWM allows you control devices, such as motors and lamps. 
 This means that rather than the motor/lamp being simply on or off, you can regulate its speed or brightness using PWM.
 
 
@@ -278,11 +277,11 @@ while True:
 
 ```
 
-Click the green play button to run the and save it as `PWM-LED.py`
+Click the green play button to run the code and save it as `PWM-LED.py`
 
 ## Controling the GBE light pannel 
 
-Now that we undestand PWM lets control the Red LEDs lights on the GBE box light pannel 
+Now that we undestand PWM, let's control the red LEDs lights on the main light panel 
 
 ![FAOiOaJVQAgzIez](https://user-images.githubusercontent.com/1426877/137812924-6f1ab3f4-2bfb-4634-a012-9b73efbdb6d2.jpeg)
 
@@ -323,7 +322,7 @@ else:
     print("turn the Red LED off")
     r.duty_u16(0) #turn it off 
 ```
-Click the Green Play button to Run the and save it as PWM-RedLED.py
+Click the Green Play button to run the code and save it as PWM-RedLED.py
 
 
 Now lets control all the lights on the GBE box 
@@ -416,7 +415,7 @@ else:
 ```
 
 
-If you are intrested on what code is running on your control box today here is the link https://github.com/Growing-Beyond-Earth/control-box
+If you are intrested on what code is running on your control box today, here is the link https://github.com/Growing-Beyond-Earth/control-box
 
 **NOTE: If you wish to run the code automatically whenever you power Raspberry Pi Pico then you have to name your code file as `main.py` wile saving it.**
 
