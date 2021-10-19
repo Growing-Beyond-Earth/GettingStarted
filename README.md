@@ -6,7 +6,7 @@ In this first lesson, we demonstrate how to use Thonny IDE and MicroPython on a 
 
 Let's begin by downloading and installing [Thonny Python IDE for beginners ](https://thonny.org/).
 
-Once Thonny is installed, connect the Raspberry Pi Pico to the computer via the USB cable. When you start Thonny it should detect the Pico.
+Once Thonny is installed, switch off the main power to the GBE Control Box and connect the Micro USB cable to the Raspberry Pi Pico inside the Control Box. Connect the other end of the cable to a USB port on your computer. When you start Thonny it should detect the Pico.
 
 <img width="480" alt="USB" src="https://user-images.githubusercontent.com/1426877/137810102-ff0c4ffd-cd28-4c82-b689-bbe59cab93dd.jpeg"> <img width="480" alt="USB/GBE" src="https://user-images.githubusercontent.com/1426877/137810163-8d4aaa12-0de8-4751-a105-00ea4aa79e26.jpeg">
 
@@ -166,7 +166,7 @@ Click the green play button to run the and save it as lesson4.py
 Here we see the highly dynamic nature of Python.  We add integers and get an integer.  We add an integer and a float, and get a float.  
 Add strings to get concatenated strings.  Add lists to get concatenated lists.
 
-Checkout these links for more details on the builtin function [range](https://www.w3schools.com/python/ref_func_range.asp) and [list comprehensions](https://www.w3schools.com/python/python_lists_comprehension.asp)
+Check out these links for more details on the builtin function [range](https://www.w3schools.com/python/ref_func_range.asp) and [list comprehensions](https://www.w3schools.com/python/python_lists_comprehension.asp)
 
 ## Capstone: GPIO
 
@@ -175,8 +175,8 @@ Now let's start working with the Control box.
 ![IMG_4519](https://user-images.githubusercontent.com/1426877/137814836-7e92faf8-b270-49fd-b2f4-61e9a0277072.jpeg)
 
 
-GPIO Pins
-Is the way to control other components through the GPIO pins. Not all pins are available to use.
+GPIO (general purpose input/output) Pins
+Components attached to the Pico are controlled through the GPIO pins. Not all pins are available to use.
 
 The pins are available in the machine module, so make sure you import that first.
 let's define led to the pin
@@ -306,8 +306,9 @@ red_brightness = 100
 # machine.Pin(id, mode=- 1, pull=- 1, *, value, drive, alt)
 #Pins for the GBE light panel 
 #Red Lights   Pin(0)
-#Green Lights Pin(2)
-#Blue Lights  Pin(3)
+#Green Lights Pin(1)
+#Blue Lights  Pin(2)
+#White Lights  Pin(3)
 r=machine.PWM(machine.Pin(0)); r.freq(20000)   # Setup the Red channel on Pin0
 n=100
 while n > 0:
@@ -324,6 +325,7 @@ Click the Green Play button to Run the and save it as PWM-RedLED.py
 
 
 Now lets control all the lights on the GBE box 
+
 Create a new script with `File>New` and paste in the following code:
 
 ```
@@ -349,8 +351,8 @@ white_brightness = 100
 # the pin. Any settings that are not specified will remain in their previous state.
 # More info https://docs.micropython.org/en/latest/library/machine.Pin.html
 r=machine.PWM(machine.Pin(0)); r.freq(20000)   # Red channel
-g=machine.PWM(machine.Pin(2)); g.freq(20000)   # Green channel
-b=machine.PWM(machine.Pin(1)); b.freq(20000)   # Blue channel
+g=machine.PWM(machine.Pin(1)); g.freq(20000)   # Green channel
+b=machine.PWM(machine.Pin(2)); b.freq(20000)   # Blue channel
 w=machine.PWM(machine.Pin(3)); w.freq(20000)   # White channel
 # More info https://docs.micropython.org/en/latest/library/machine.PWM.html
 # Start a loop and change the brightness multiplier "n"
