@@ -159,9 +159,6 @@ for i in range(5):
 #range(start, stop)
 range_as_list = [i for i in range(3, 10)]
 print(range_as_list)
-
-# range(start, stop, step)
-print([i for i in range(3, 5, .5)])
 ```
 
 Click the green play button to run the and save it as lesson4.py
@@ -215,7 +212,7 @@ while n < 8:
     sleep(0.5)
 
 else:
-  print("Done toggling ")
+    print("Done toggling ")
  ```
 
 What does this new example do ?
