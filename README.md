@@ -408,15 +408,9 @@ else:
 ```
 
 
+If you are intrested on what code is running on your control box today here is the link https://github.com/Growing-Beyond-Earth/control-box
 
-
-
-
-
-
-
-
-**NOTE: If you wish to run the code automatically whenever you power Raspberry Pi Pico then you have to name your code file as `main.py` while saving it.**
+**NOTE: If you wish to run the code automatically whenever you power Raspberry Pi Pico then you have to name your code file as `main.py` wile saving it.**
 
 ## Raspberry Pi Pico Python SDK
 
