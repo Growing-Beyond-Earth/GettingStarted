@@ -322,7 +322,7 @@ else:
     print("turn the Red LED off")
     r.duty_u16(0) #turn it off 
 ```
-Click the Green Play button to run the code and save it as PWM-RedLED.py
+Click the Green Play button to run the code and save it as `PWM-RedLED.py`
 
 
 Now lets control all the lights on the GBE box 
@@ -386,7 +386,7 @@ print("Power Level Off")
 
 ```
 
-Click the Green Play(Run) button to Run the and save it as LightTestLoop.py
+Click the Green Play(Run) button to Run the and save it as `LightTestLoop.py`
 
 
 ## Controling the GBE fan
