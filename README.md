@@ -208,8 +208,8 @@ Click the Green Play button to Run
 
 The LED should be toggling on and off. 
 
-Now lets make the LED fade in and out using Pulse width modulation (PWM) as we move foeard the next best thing is 
-to start comenting your code. Moving foward all the examples will have the expxlantion in the code. 
+Now let's make the LED fade in and out using Pulse width modulation (PWM); as we move forward, 
+the next best thing is to start commenting on your code. Again, moving forward, all the examples will have an explanation in the code. 
 
 In order to use PWM in MicroPython, we will use just three instructions:
 ```
@@ -228,11 +228,12 @@ and off for half the pulses.
 
 If you run the test code  above, it should generate a 100kHz PWM signal with a 50% duty cycle on pin 16
 
-PWM Pulse width modulation allows you control devices, such as motors and lamps,LED's. This means that rather than the motor/lamp being simply on or off, 
+PWM Pulse width modulation allows you to control devices, such as motors and lamps, LED. This means that rather than the motor/lamp being simply on or off, 
 you can regulate its speed or brightness.
 
 Create a new script with File>New and paste in the following code:
-Let’s use the PWM feature to fade an LED 
+
+Let's use the PWM feature to fade an LED in and out
 
 ```
 from machine import Pin, PWM
@@ -393,8 +394,9 @@ w.duty_u16(0)
 Click the Green Play(Run) button to Run the and save it as LightTestLoop.py
 
 
+## Controling the GBE fan
 
-Control the Fan 
+
 
 ```
 import machine
@@ -403,7 +405,7 @@ from time import sleep
 # machine.Pin(id, mode=- 1, pull=- 1, *, value, drive, alt)
 
 #Pin for the GBE FAN
-#Pin(40
+#Pin(40)
 
 fan_speed = 500
 f=machine.PWM(machine.Pin(4)); f.freq(20000)   # Fan
@@ -420,7 +422,6 @@ else:
     print("turn the Fan off")
     f.duty_u16(0)
 ```
-
 
 
 
