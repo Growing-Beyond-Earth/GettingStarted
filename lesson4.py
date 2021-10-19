@@ -1,3 +1,15 @@
+# GROWNG BEYOND EARTH CONTROL BOX Traning
+# RASPBERRY PI PICO / MICROPYTHON
+
+# FAIRCHILD TROPICAL BOTANIC GARDEN, October 18, 2021
+
+# The Growing Beyond Earth (GBE) control box is a device that controls
+# the LED lights and fan in a GBE growth chamber. It can also control
+# accessories including a 12v water pump and environmental sensors. 
+# The device is based on a Raspberry Pi Pico microcontroller running 
+# Micropython.
+# lesson Written by @MarioTheMaker
+
 # the + operator in python is overloaded!
 print(3+5)
 print(type(3), type(5), type(3+5))
