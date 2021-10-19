@@ -11,9 +11,9 @@
 # lesson Written by @MarioTheMaker  
 
 
+from machine import Pin, PWM
+from time import sleep
 
-
-# Example using PWM to fade an LED.
 # Pulse width modulation (PWM) is a way to get an artificial analog output on a digital pin.
 # It achieves this by rapidly toggling the pin from low to high. There are two parameters
 # associated with this: the frequency of the toggling, and the duty cycle.
@@ -29,28 +29,22 @@
 # the pin. Any settings that are not specified will remain in their previous state.
 # More info https://docs.micropython.org/en/latest/library/machine.Pin.html
 
-
-
-
-import time
-from machine import Pin, PWM
-
 # Construct PWM object, with LED on Pin(6) pin used on the GBE Box.
 pwm = PWM(Pin(6))
 
 # Set the PWM frequency.
 pwm.freq(1000)
 
-# Fade the LED in and out a few times.
-duty = 0
-direction = 1
-for _ in range(8 * 256):
-    duty += direction
-    if duty > 255:
-        duty = 255
-        direction = -1
-    elif duty < 0:
-        duty = 0
-        direction = 1
-    pwm.duty_u16(duty * duty)
-    time.sleep(0.005)
+#Start Loop
+
+#FadeIn
+while True:
+    for duty in range(65025):
+        pwm.duty_u16(duty)
+        sleep(0.0001)
+#FadeOut
+    for duty in range(65025, 0, -1):
+        pwm.duty_u16(duty)
+        sleep(0.0001)
+
+
