@@ -454,3 +454,15 @@ As well as learning how to use Raspberry Pi Pico’s pins as inputs and outputs,
 your Pico’s file system, and even make a burglar alarm for your room.
 
 [Get Started with MicroPython on Raspberry Pi Pico is available now from Raspberry Pi Press](https://magpi.cc/picobook).
+
+
+
+The most used Python keywords are the following.
+False   True    and         or
+not     break   continue    class
+def     if      elif        else
+for     while   in          is
+None    lambda  return
+
+
+
